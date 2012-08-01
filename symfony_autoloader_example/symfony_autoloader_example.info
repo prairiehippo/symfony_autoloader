@@ -1,0 +1,5 @@
+name = Symfony Autoloader Example
+description = Demonstrates how to use the symfony autoloader integration
+package = Other
+version = 0.1
+core = 7.x

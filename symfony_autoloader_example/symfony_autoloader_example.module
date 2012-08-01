@@ -1,0 +1,13 @@
+<?php
+
+//Inform the symfony autoloader about our test namespace (default is site root)
+symfony_autoloader_register_namespace(array('TestNamespace' => __DIR__ . '/inc'));
+
+/**
+ * Implements hook_init().
+ */
+function symfony_autoloader_example_init() {
+  $my_class = new TestNamespace\MyClass();
+
+  drupal_set_message('Autoloaded class says ' . $my_class->printName());
+}

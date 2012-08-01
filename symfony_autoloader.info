@@ -1,0 +1,5 @@
+name = Symfony Autoloader
+description = Enables the use of the Symfony Classloader
+package = Other
+version = 0.1
+core = 7.x

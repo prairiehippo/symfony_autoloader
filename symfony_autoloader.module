@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Registers a class namespace with the Symfony Class Loader
+ * 
+ * @param  array  $namespaces
+ */
+function symfony_autoloader_register_namespace($namespaces = array()){
+  $classloader_path = 'sites/all/libraries/Symfony/Component';
+
+  require_once $classloader_path . '/ClassLoader/UniversalClassLoader.php';
+
+  $loader = new Symfony\Component\ClassLoader\UniversalClassLoader();
+  $loader->registerNamespaces($namespaces);
+  $loader->register();
+}
